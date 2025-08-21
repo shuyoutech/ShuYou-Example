@@ -1,0 +1,22 @@
+spring:
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password: password
+      database: 0
+    mongodb:
+      uri: mongodb://root:password@127.0.0.1:27017/cloud_shuyou?maxPoolSize=1024&socketTimeoutMs=60000&connectTimeoutMS=60000&authSource=admin
+  milvus:
+    uri: http://127.0.0.1:19530
+    username: root
+    password: password
+logging:
+  config: classpath:logback-spring.xml
+
+sa-token:
+  jwt-secret-key: 1OenTT5jXofV1FGcRg2b02Ww5vApVPAsTbgHOPbo2qLBrVcD3UKDfafEGk2xOFoPaZxUJRlFXUTca0iSTBSaDQ==
+
+shuyoutech:
+  cache:
+    name: ${spring.application.name}
